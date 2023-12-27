@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConfigFile">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFCAAAAQAAAgCAAAAIAAAAAIAAAAAAAAAgAAAAIAQA=</HashCode>
+      <FileName>IO\ConfigFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConfigManager">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAgAAgAAAAAAEAAAAAAAACAAAAAAAIAhA=</HashCode>
+      <FileName>IO\ConfigManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAQAAAAIgAAAAAAQAAACIAAQAAAQgAQAAABY=</HashCode>
+      <FileName>Net\ChatClient.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Color">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Color::Code" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UI\Color.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAEAAACAAAAAgAAAAAA=</HashCode>
+      <FileName>UI\Color.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Content">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>UI\Content.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Input">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAMAAAAAAAEAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>UI\Input.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Message">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>UI\Message.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Msg">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Msg::Align" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UI\Msg.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAABEAAAAAA=</HashCode>
+      <FileName>UI\Msg.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\UI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
