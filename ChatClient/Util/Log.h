@@ -20,4 +20,11 @@ inline void elog(std::string msg = "") {
 
 }
 
+inline void pause() {
+	std::string buffer;
+	std::cin >> buffer;
+	std::cin.ignore();
+}
+
+
 #endif

@@ -8,7 +8,7 @@ const char* ConfigManager::CONFIG_FILE_NAME = "ClientConfig.ini";
 
 ConfigManager::ConfigManager() {
     configFile = new ConfigFile();
-    if(checkConfigFile())
+    if(configFileExist())
         loadConfigFile();
     else
         createConfigFile();
@@ -22,7 +22,7 @@ void ConfigManager::createConfigFile() {
     ofs.close();
 }
 
-bool ConfigManager::checkConfigFile() {
+bool ConfigManager::configFileExist() {
     ifstream i(CONFIG_FILE_NAME);
 
     if(!i.good()){
@@ -33,16 +33,56 @@ bool ConfigManager::checkConfigFile() {
     return true;
 }
 
+bool ConfigManager::configFileIsFine()
+{
+    for (char c : this->configFile->getValue(ConfigFile::MAX_WIDTH_)) {
+        if (c < '0' || c > '9')
+            return false;
+    }
+	for (char c : this->configFile->getValue(ConfigFile::PORT_)) {
+		if (c < '0' || c > '9')
+			return false;
+	}
+
+    int i{1};
+	for (char c : this->configFile->getValue(ConfigFile::IP_)) {
+        if (i % 4 == 0 && c != '.')
+            return false;
+		else if ((c < '0' || c > '9'))
+			return false;
+	}
+
+    return true;
+}
+
 void ConfigManager::loadConfigFile() {
     ifstream ifs(CONFIG_FILE_NAME);
     string word;
     for(int n{0}; ifs >> word; ){
-        configFile->readLine(word,n++);
+        try {
+			configFile->readLine(word, n++);
+        }
+        catch (std::exception e) {
+            log(e.what());
+            log("created a default file for you if you type any key");
+            pause();
+            createConfigFile();
+			return;
+        }
         if(n == 3)
             n = 0;
     }
-
+    
     ifs.close();
+
+    if (!configFileIsFine()) {
+		log("created a default file for you if you type any key");
+		pause();
+		createConfigFile();
+        delete configFile;
+        configFile = new ConfigFile;
+        
+    }
 }
 
 void ConfigManager::saveConfigFile(){

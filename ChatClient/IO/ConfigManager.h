@@ -7,6 +7,7 @@
 #define H_ConfigManager
 
 #include <fstream>
+#include "../Util/Log.h"
 #include "ConfigFile.h"
 
 using std::ofstream;
@@ -21,7 +22,9 @@ public:
 
     void createConfigFile();
 
-    bool checkConfigFile();
+    bool configFileExist();
+
+    bool configFileIsFine();
 
     void loadConfigFile();
 

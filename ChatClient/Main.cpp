@@ -14,7 +14,7 @@ ConfigManager* initConfigFile();
 Client* initClient();
 
 UI* ui = new UI();
-ConfigManager* config = initConfigFile();
+ConfigManager* config;
 Client* client;
 
 ConfigManager* initConfigFile() {
@@ -39,6 +39,7 @@ void closeClient(){
 }
 
 int main() {
+	config = initConfigFile();
 	do {
 
 
